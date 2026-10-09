@@ -1,0 +1,26 @@
+{
+  "total_questions_tested": 38,
+  "graph_rag_conflict_recall": 1.0,
+  "graph_rag_conflict_precision": 1.0,
+  "baseline_silent_pick_rate": 1.0,
+  "example_conflict_handled": {
+    "question": "What is the batch window for the analytics pipeline?",
+    "graph_response": {
+      "answer": "The sources disagree about analytics_pipeline batch_window; the graph records conflicting values. The newer source, analytics-modernization-adr.md (2024-02-21), reports 3m with confidence 0.96. As a separate resolution heuristic, prioritize the more recent timestamp (and compare confidence), but retain the conflict rather than treating either value as undisputed.",
+      "agreement_status": "conflict",
+      "sources": [
+        {
+          "value": "1m",
+          "source": "dashboard-legacy-spec.pdf",
+          "timestamp": "2021-08-16"
+        },
+        {
+          "value": "3m",
+          "source": "analytics-modernization-adr.md",
+          "timestamp": "2024-02-21"
+        }
+      ]
+    },
+    "baseline_response": "The analytics pipeline batch window is 3m according to analytics-modernization-adr.md."
+  }
+}

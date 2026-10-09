@@ -1,0 +1,416 @@
+[
+  {
+    "entity": "database",
+    "attribute": "connection_timeout",
+    "value": "30s",
+    "source": "ops-runbook-2022.pdf",
+    "timestamp": "2022-06-02",
+    "confidence": 0.9,
+    "context_text": "The database connection timeout for the primary database is set to 30 seconds in the legacy runbook."
+  },
+  {
+    "entity": "database",
+    "attribute": "connection_timeout",
+    "value": "60s",
+    "source": "architecture-adr-2024.pdf",
+    "timestamp": "2024-02-18",
+    "confidence": 0.98,
+    "context_text": "The architecture ADR confirms that the database connection timeout was increased to 60 seconds."
+  },
+  {
+    "entity": "payments_service",
+    "attribute": "api_timeout",
+    "value": "20s",
+    "source": "payments-guide-v1.docx",
+    "timestamp": "2021-11-14",
+    "confidence": 0.88,
+    "context_text": "The first payments runbook states the API timeout must not exceed 20 seconds."
+  },
+  {
+    "entity": "payments_service",
+    "attribute": "api_timeout",
+    "value": "45s",
+    "source": "payments-platform-update.pdf",
+    "timestamp": "2024-03-12",
+    "confidence": 0.96,
+    "context_text": "The latest platform update raises the payments API timeout to 45 seconds."
+  },
+  {
+    "entity": "auth_service",
+    "attribute": "token_ttl",
+    "value": "60m",
+    "source": "security-baseline-2022.md",
+    "timestamp": "2022-09-08",
+    "confidence": 0.91,
+    "context_text": "The security baseline defines a 60 minute authentication token TTL."
+  },
+  {
+    "entity": "auth_service",
+    "attribute": "token_ttl",
+    "value": "90m",
+    "source": "identity-access-policy-2024.pdf",
+    "timestamp": "2024-05-26",
+    "confidence": 0.97,
+    "context_text": "The current identity access policy extends the token TTL to 90 minutes."
+  },
+  {
+    "entity": "cache_cluster",
+    "attribute": "eviction_policy",
+    "value": "lru",
+    "source": "cache-tuning-notes.txt",
+    "timestamp": "2023-01-18",
+    "confidence": 0.86,
+    "context_text": "The initial cache tuning notes specify the eviction policy as least recently used."
+  },
+  {
+    "entity": "cache_cluster",
+    "attribute": "eviction_policy",
+    "value": "ttl",
+    "source": "cache-rearchitecture-2024.md",
+    "timestamp": "2024-01-30",
+    "confidence": 0.95,
+    "context_text": "The re-architecture document changes the eviction policy to time-to-live based expiry."
+  },
+  {
+    "entity": "search_index",
+    "attribute": "refresh_interval",
+    "value": "5m",
+    "source": "search-ops-checklist.pdf",
+    "timestamp": "2022-12-06",
+    "confidence": 0.87,
+    "context_text": "The operations checklist expects the search index refresh interval to be every 5 minutes."
+  },
+  {
+    "entity": "search_index",
+    "attribute": "refresh_interval",
+    "value": "15m",
+    "source": "search-platform-roadmap.md",
+    "timestamp": "2024-05-11",
+    "confidence": 0.94,
+    "context_text": "The product roadmap lowers the refresh cadence to 15 minutes for better stability."
+  },
+  {
+    "entity": "analytics_pipeline",
+    "attribute": "batch_window",
+    "value": "1m",
+    "source": "dashboard-legacy-spec.pdf",
+    "timestamp": "2021-08-16",
+    "confidence": 0.89,
+    "context_text": "The legacy dashboard specification batches analytics events every minute."
+  },
+  {
+    "entity": "analytics_pipeline",
+    "attribute": "batch_window",
+    "value": "3m",
+    "source": "analytics-modernization-adr.md",
+    "timestamp": "2024-02-21",
+    "confidence": 0.96,
+    "context_text": "The analytics modernization ADR updates the batch window to 3 minutes."
+  },
+  {
+    "entity": "notification_service",
+    "attribute": "retry_limit",
+    "value": "3",
+    "source": "notification-runbook-v2.pdf",
+    "timestamp": "2022-03-22",
+    "confidence": 0.9,
+    "context_text": "The notification runbook allows only three retries for failed messages."
+  },
+  {
+    "entity": "notification_service",
+    "attribute": "retry_limit",
+    "value": "5",
+    "source": "notification-resilience-2024.md",
+    "timestamp": "2024-07-21",
+    "confidence": 0.97,
+    "context_text": "The resilience design review raises the retry limit to five."
+  },
+  {
+    "entity": "storage_broker",
+    "attribute": "max_connections",
+    "value": "200",
+    "source": "storage-runbook-2020.pdf",
+    "timestamp": "2020-09-19",
+    "confidence": 0.83,
+    "context_text": "The original storage runbook caps the number of broker connections at 200."
+  },
+  {
+    "entity": "storage_broker",
+    "attribute": "max_connections",
+    "value": "350",
+    "source": "storage-capacity-plan-2024.md",
+    "timestamp": "2024-04-09",
+    "confidence": 0.98,
+    "context_text": "The latest capacity plan increases the broker max connection limit to 350."
+  },
+  {
+    "entity": "database",
+    "attribute": "replication_mode",
+    "value": "async",
+    "source": "database-ops-manual.pdf",
+    "timestamp": "2024-01-10",
+    "confidence": 0.9,
+    "context_text": "The database replication mode remains asynchronous for the primary cluster."
+  },
+  {
+    "entity": "database",
+    "attribute": "backup_window",
+    "value": "02:00-03:00 UTC",
+    "source": "backup-policy-2024.md",
+    "timestamp": "2024-02-02",
+    "confidence": 0.92,
+    "context_text": "Nightly backups run from 02:00 to 03:00 UTC."
+  },
+  {
+    "entity": "database",
+    "attribute": "read_replicas",
+    "value": "3",
+    "source": "capacity-plan-2024.md",
+    "timestamp": "2024-03-05",
+    "confidence": 0.94,
+    "context_text": "The system maintains three read replicas for the primary database."
+  },
+  {
+    "entity": "payments_service",
+    "attribute": "region",
+    "value": "us-east-1",
+    "source": "payments-ops-guide.pdf",
+    "timestamp": "2024-04-10",
+    "confidence": 0.97,
+    "context_text": "The payments service is deployed in the us-east-1 region."
+  },
+  {
+    "entity": "payments_service",
+    "attribute": "is_ha_enabled",
+    "value": "true",
+    "source": "payments-ha-checklist.md",
+    "timestamp": "2024-07-01",
+    "confidence": 0.95,
+    "context_text": "The service is configured with high availability enabled."
+  },
+  {
+    "entity": "auth_service",
+    "attribute": "sso_provider",
+    "value": "azure-ad",
+    "source": "identity-integration-doc.pdf",
+    "timestamp": "2024-05-13",
+    "confidence": 0.96,
+    "context_text": "The application authenticates users through Azure AD."
+  },
+  {
+    "entity": "auth_service",
+    "attribute": "mfa_required",
+    "value": "true",
+    "source": "security-policy-2024.md",
+    "timestamp": "2024-05-20",
+    "confidence": 0.99,
+    "context_text": "Multi-factor authentication is required for all production users."
+  },
+  {
+    "entity": "cache_cluster",
+    "attribute": "ttl_seconds",
+    "value": "1800",
+    "source": "cache-spec-v5.pdf",
+    "timestamp": "2024-06-14",
+    "confidence": 0.95,
+    "context_text": "The cache entry TTL is set to 1800 seconds."
+  },
+  {
+    "entity": "cache_cluster",
+    "attribute": "memory_limit_gb",
+    "value": "32",
+    "source": "platform-capacity-plan.md",
+    "timestamp": "2024-04-07",
+    "confidence": 0.96,
+    "context_text": "The cluster capacity plan allocates 32 GB of memory."
+  },
+  {
+    "entity": "search_index",
+    "attribute": "index_type",
+    "value": "vector",
+    "source": "search-architecture-doc.pdf",
+    "timestamp": "2024-03-24",
+    "confidence": 0.94,
+    "context_text": "The search index is built using vector embeddings."
+  },
+  {
+    "entity": "search_index",
+    "attribute": "shard_count",
+    "value": "6",
+    "source": "search-ops-benchmark.md",
+    "timestamp": "2024-06-11",
+    "confidence": 0.9,
+    "context_text": "The search index uses six shards for load balancing."
+  },
+  {
+    "entity": "analytics_pipeline",
+    "attribute": "data_source",
+    "value": "kafka",
+    "source": "analytics-integration-spec.md",
+    "timestamp": "2024-03-18",
+    "confidence": 0.96,
+    "context_text": "The analytics pipeline consumes data from Kafka."
+  },
+  {
+    "entity": "analytics_pipeline",
+    "attribute": "retention_days",
+    "value": "30",
+    "source": "retention-policy-2024.pdf",
+    "timestamp": "2024-05-07",
+    "confidence": 0.93,
+    "context_text": "The analytics warehouse retains raw data for 30 days."
+  },
+  {
+    "entity": "notification_service",
+    "attribute": "transport",
+    "value": "email",
+    "source": "notification-overview.pdf",
+    "timestamp": "2024-04-22",
+    "confidence": 0.91,
+    "context_text": "The service primarily delivers notifications over email."
+  },
+  {
+    "entity": "notification_service",
+    "attribute": "dead_letter_queue",
+    "value": "enabled",
+    "source": "resilience-design-v3.md",
+    "timestamp": "2024-07-02",
+    "confidence": 0.97,
+    "context_text": "Dead-letter queues are enabled for failed notifications."
+  },
+  {
+    "entity": "storage_broker",
+    "attribute": "storage_backend",
+    "value": "s3",
+    "source": "storage-architecture-doc.pdf",
+    "timestamp": "2024-03-01",
+    "confidence": 0.94,
+    "context_text": "The broker stores payloads in S3."
+  },
+  {
+    "entity": "storage_broker",
+    "attribute": "replication_factor",
+    "value": "3",
+    "source": "storage-capacity-plan.md",
+    "timestamp": "2024-04-09",
+    "confidence": 0.93,
+    "context_text": "The storage broker replicates objects across three nodes."
+  },
+  {
+    "entity": "job_scheduler",
+    "attribute": "cron_expression",
+    "value": "0 * * * *",
+    "source": "scheduler-runbook.pdf",
+    "timestamp": "2024-02-09",
+    "confidence": 0.9,
+    "context_text": "The scheduler runs hourly jobs at minute 0."
+  },
+  {
+    "entity": "job_scheduler",
+    "attribute": "max_retries",
+    "value": "4",
+    "source": "scheduler-resilience-plan.md",
+    "timestamp": "2024-01-19",
+    "confidence": 0.92,
+    "context_text": "Job retries are capped at four attempts."
+  },
+  {
+    "entity": "job_scheduler",
+    "attribute": "timezone",
+    "value": "UTC",
+    "source": "cloud-config-2024.md",
+    "timestamp": "2024-05-02",
+    "confidence": 0.96,
+    "context_text": "All scheduled jobs are configured in UTC."
+  },
+  {
+    "entity": "feature_flag_service",
+    "attribute": "rollout_strategy",
+    "value": "percentage",
+    "source": "feature-flag-policy.md",
+    "timestamp": "2024-03-27",
+    "confidence": 0.9,
+    "context_text": "Feature flags use percentage-based rollouts."
+  },
+  {
+    "entity": "feature_flag_service",
+    "attribute": "default_state",
+    "value": "off",
+    "source": "feature-flag-policy.md",
+    "timestamp": "2024-03-27",
+    "confidence": 0.9,
+    "context_text": "New feature flags default to the off state."
+  },
+  {
+    "entity": "user_profile_store",
+    "attribute": "read_replica_count",
+    "value": "2",
+    "source": "profile-service-spec.pdf",
+    "timestamp": "2024-06-18",
+    "confidence": 0.94,
+    "context_text": "The profile store includes two read replicas."
+  },
+  {
+    "entity": "user_profile_store",
+    "attribute": "cache_enabled",
+    "value": "true",
+    "source": "profile-service-spec.pdf",
+    "timestamp": "2024-06-18",
+    "confidence": 0.95,
+    "context_text": "Caching is enabled for profile reads."
+  },
+  {
+    "entity": "api_gateway",
+    "attribute": "rate_limit",
+    "value": "500rpm",
+    "source": "gateway-security-guide.pdf",
+    "timestamp": "2024-05-17",
+    "confidence": 0.93,
+    "context_text": "The API gateway enforces a 500 requests per minute rate limit."
+  },
+  {
+    "entity": "api_gateway",
+    "attribute": "tls_version",
+    "value": "1.3",
+    "source": "gateway-security-guide.pdf",
+    "timestamp": "2024-05-17",
+    "confidence": 0.96,
+    "context_text": "The API gateway terminates TLS version 1.3."
+  },
+  {
+    "entity": "message_bus",
+    "attribute": "retention_hours",
+    "value": "72",
+    "source": "messaging-policy.md",
+    "timestamp": "2024-04-16",
+    "confidence": 0.92,
+    "context_text": "Messages are retained for 72 hours in the bus."
+  },
+  {
+    "entity": "message_bus",
+    "attribute": "acks",
+    "value": "all",
+    "source": "messaging-policy.md",
+    "timestamp": "2024-04-16",
+    "confidence": 0.94,
+    "context_text": "The bus requires all replicas to acknowledge a message."
+  },
+  {
+    "entity": "ml_inference_service",
+    "attribute": "latency_budget_ms",
+    "value": "250",
+    "source": "inference-service-spec.pdf",
+    "timestamp": "2024-04-30",
+    "confidence": 0.95,
+    "context_text": "The inference service keeps latency under 250 milliseconds."
+  },
+  {
+    "entity": "ml_inference_service",
+    "attribute": "model_version",
+    "value": "v3.8",
+    "source": "inference-service-spec.pdf",
+    "timestamp": "2024-04-30",
+    "confidence": 0.93,
+    "context_text": "The production inference model runs on version v3.8."
+  }
+]
